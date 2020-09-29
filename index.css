@@ -1,0 +1,135 @@
+body{
+    background-color: dimgray;
+}
+header{
+    display:flex;
+}
+header{
+    justify-content: center;
+}
+.container{
+    display:grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:1em;
+}
+.container > .box1{
+    padding: 3fr;
+    background-color: dimgray;
+    border: 3px solid black;
+    position: relative;
+}
+
+.container > .box2{
+    padding: 3fr;
+    background-color: dimgray;
+    border: 3px solid black;
+    position: relative;
+}
+.container > .box3{
+    padding: 3fr;
+    background-color: dimgray;
+    border: 3px solid black;
+    position: relative;
+}
+.box1{
+    display:grid;
+    grid-row:1;
+    grid-column: 1;
+}
+.uptext1{
+    padding: 5px;
+    border-bottom:3px black solid;
+    border-left: 3px black solid;
+    background-color:indianred;
+    grid-row:-2;
+    grid-column:3;
+    position:absolute;
+    top: 0;
+    right: 0;
+
+}
+.box2{
+    display:grid;
+    grid-column: 2;
+    grid-row:1;
+
+}
+.uptext2{
+    padding: 5px;
+    justify-items:end;
+    align-items:start;
+    border-bottom:3px black solid;
+    border-left: 3px black solid;
+    background-color:darkred;
+    color:white;
+    grid-row:-2;
+    grid-column: 2;
+    position:absolute;
+    top: 0;
+    right: 0;
+}
+.box3 {
+    display:grid;
+    grid-column: 3;
+    grid-row: 1;
+}
+.uptext3{
+    padding: 5px;
+    justify-items:end;
+    align-items:start;
+    border-bottom:3px black solid;
+    border-left: 3px black solid;
+    background-color:wheat;
+    grid-row:-2;
+    grid-column: 3;
+    position:absolute;
+    top: 0;
+    right: 0;
+}
+@media (max-width:768px){
+    body{
+        background-color: dimgray;
+    }
+    .container{
+        grid-template-columns:1fr;
+        grid-template-rows:1fr 1fr 1fr;
+    }
+    .box1{
+        display: grid;
+        grid-row:1;
+        grid-column:1;
+    }
+
+    .box2{
+        display: grid;
+        grid-row:2/3;
+        grid-column:1/2;
+    }
+    .box3{
+        display: grid;
+        grid-row:3/4;
+        grid-column:1/2;
+    }
+}
+
+@media (min-width: 768px) and (max-width:1024px){
+    body{
+        background-color: lightgray;
+    }
+    .box1{
+        display: grid;
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    .box2{
+        display: grid;
+        grid-row:1/2;
+        grid-column: 2/3;
+    }
+    .box3{
+        display: grid;
+        grid-row:2;
+        grid-column: 1/3;
+    }
+}
